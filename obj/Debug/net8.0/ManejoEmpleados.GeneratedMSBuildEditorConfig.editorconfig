@@ -9,115 +9,115 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ManejoEmpleados
 build_property.RootNamespace = ManejoEmpleados
-build_property.ProjectDir = C:\Users\junio\source\repos\ManejoEmpleados\
+build_property.ProjectDir = C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\ManejoEmpleados\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\junio\source\repos\ManejoEmpleados
+build_property.MSBuildProjectDirectory = C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\ManejoEmpleados
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Dashboard/DashboardGeneral.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Dashboard/DashboardGeneral.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZEdlbmVyYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Departamentos/Editar.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Departamentos/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Departamentos/Lista.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Departamentos/Lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xMaXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Departamentos/Nuevo.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Departamentos/Nuevo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVwYXJ0YW1lbnRvc1xOdWV2by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Empleados/Borrar.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Empleados/Borrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEJvcnJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Empleados/Editar.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Empleados/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXEVkaXRhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Empleados/Lista.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Empleados/Lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXExpc3RhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Empleados/Nuevo.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Empleados/Nuevo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXE51ZXZvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Empleados/TablaEmpleadosVista.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Empleados/TablaEmpleadosVista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRW1wbGVhZG9zXFRhYmxhRW1wbGVhZG9zVmlzdGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Home/ErrorSalario.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Home/ErrorSalario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvclNhbGFyaW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Home/Index.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Home/NoAutenticado.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Home/NoAutenticado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb0F1dGVudGljYWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Home/NoEncontrado.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Home/NoEncontrado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb0VuY29udHJhZG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Home/Privacy.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Posiciones/Editar.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Posiciones/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25lc1xFZGl0YXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Posiciones/Lista.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Posiciones/Lista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25lc1xMaXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Posiciones/Nuevo.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Posiciones/Nuevo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zaWNpb25lc1xOdWV2by5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Shared/DashBoardSideBar.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Shared/DashBoardSideBar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXERhc2hCb2FyZFNpZGVCYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Shared/Error.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Usuarios/Login.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Usuarios/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Usuarios/Registro.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Usuarios/Registro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcUmVnaXN0cm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Usuarios/_layout.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Usuarios/_layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcX2xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/_ViewImports.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/_ViewStart.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/junio/source/repos/ManejoEmpleados/Views/Shared/_Layout.cshtml]
+[C:/Users/junio/OneDrive/Escritorio/c\# CURSO FULL/ManejoEmpleados/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-x3bdgtf5uy
