@@ -1,0 +1,98 @@
+﻿@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<img src="/blancogente.jpg" alt="Logo de la aplicación"
+     class="ClienteFoto">
+
+     @*<div class="LoginDivMain">*@
+
+
+<div class="divLoginH2">
+
+    <h2 class="h2LoginBienvenido">Bienvenido a la aplicación de manejo de empleados</h2>
+    <p class="h2p">
+        Nuestra herramienta le permitirá gestionar sus empleados de manera
+        eficiente y fácil. ¡Inicie sesión para comenzar!
+    </p>
+</div>
+
+
+
+
+
+<div class="box">
+
+
+
+    <input class="form-check-input checkboxPassword"
+           type="checkbox" onclick="mostrarPassword()">
+    <form class="formGeneral" asp-action="Login">
+
+        <div asp-validation-summary="ModelOnly" class="ErrorMessageLogin">
+            <i class="bi bi-exclamation-triangle-fill trianguloLogin"></i>
+        </div>
+
+
+
+
+        <h2><span class="Span-R">L</span>ogin</h2>
+
+
+
+
+        <div class="mb-3">
+
+            <input asp-for="Email" placeholder="Email" class="inputs" />
+            <span asp-validation-for="Email" class=""></span>
+        </div>
+        <div class="mb-3">
+
+            <input asp-for="Password" id="passwordInput" placeholder="Password"
+                   type="password" class="inputs" />
+            <span asp-validation-for="Password" class="r"></span>
+        </div>
+
+        <div class="group1">
+
+            <button type="submit" class="btnLogin">
+                Login
+            </button>
+            <a class="btnRegistro"
+               asp-action="Registro">
+                 Registro!
+            </a>
+        </div>
+
+
+        <div class="MicrosoftYgoogleContainer">
+
+            <a class="Microsoft"
+               asp-controller="Socials"
+               asp-action="LoginExterno"
+               asp-route-proveedor="Microsoft">
+                <i class="bi bi-microsoft icon-microsoft"></i>
+            </a>
+
+
+
+            <a class="Google" asp-controller="Socials" asp-action="LoginExterno"
+               asp-route-proveedor="Google"><i class="bi bi-google"></i></a>
+
+        </div>
+
+
+
+    </form>
+
+</div>
+
+
+@*</div>*@
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

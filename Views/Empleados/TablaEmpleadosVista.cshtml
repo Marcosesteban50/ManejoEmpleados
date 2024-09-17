@@ -1,0 +1,112 @@
+﻿
+@model List<ManejoClientes.Models.Empleado>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align:center;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+
+        .trSi{
+            background-color: #EDFFE1;
+        }
+        
+        .trNo{
+            background-color: #FFE3E1;
+        }
+
+        .h2Clientes {
+           text-align:center;
+           
+        }
+
+
+        .LSpanVista{
+            color:goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="h2Clientes"><span class="LSpanVista">L</span>ista de Empleados</h2>
+    <table>
+        <thead>
+            <tr>
+
+               @*  <th class="thItemsLista">Nombre</th>
+                <th class="thItemsLista">Email</th>
+                <th class="thItemsLista">Salario</th>
+                <th class="thItemsLista">SalarioAnual</th>
+                <th class="thItemsLista">Telefono</th>
+                <th class="thItemsLista">Posicion</th>
+                <th class="thItemsLista">Fecha Contrato</th>
+                <th class="thItemsLista">Activo</th>
+                <th class="thItemsLista">Opciones</th> *@
+
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Salario</th>
+                <th>SalarioAnual</th>
+                <th>Telefono</th>
+                <th>Posicion</th>
+                <th>Fecha Contrato</th>
+                <th>Activo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var empleado in Model)
+            {
+
+                @if (empleado.Activo)
+                    {
+                        <tr class="trSi">
+                        <td>@empleado.Nombre</td>
+                        <td>@empleado.Email</td>
+                        <td>@empleado.Salario</td>
+                        <td>@empleado.Telefono</td>
+                        <td>@empleado.Posicion</td>
+                        <td>@empleado.FechaContrato.ToString("dd/MM/yyyy")</td>
+                        <td>@(empleado.Activo ? "Sí" : "No")</td>
+                    </tr>
+                }
+                else
+                {
+                    <tr class="trNo">
+                        <td>@empleado.Nombre</td>
+                        <td>@empleado.Email</td>
+                        <td>@empleado.Salario</td>
+                        <td>@empleado.Telefono</td>
+                        <td>@empleado.Posicion</td>
+                        <td>@empleado.FechaContrato.ToString("dd/MM/yyyy")</td>
+                        <td>@(empleado.Activo ? "Sí" : "No")</td>
+                    </tr>
+                }
+
+            }
+        </tbody>
+    </table>
+</body>
+</html>

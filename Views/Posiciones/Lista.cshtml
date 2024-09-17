@@ -1,0 +1,90 @@
+﻿@using ManejoEmpleados.Models
+@model List<Posicion>
+
+@{
+    ViewData["Title"] = "Lista de posiciones";
+
+
+
+
+
+}
+<partial name="DashBoardSideBar" model="DashboardMenu.Posiciones"></partial>
+
+<div class="BoxClientes" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">
+
+    <div class="ListUserIconDiv">
+        <i class="bi bi-people-fill ListaUserIcon"></i>
+        <i class="bi bi-people-fill ListaUserIcon2"></i>
+        <i class="bi bi-people-fill ListaUserIcon3"></i>
+    </div>
+    <div class="DivBtnNuevo">
+        <a asp-controller="Posiciones" asp-action="Nuevo" class="aNuevo" data-aos="zoom-out" data-aos-delay="500">
+            <i class="bi bi-person-plus-fill AgregarCliente"></i>
+        </a>
+    </div>
+
+    <table class="table table-borderless tableLightLista">
+        <thead>
+            <tr>
+                <th class="thItemsLista">Nombre</th>
+                <th class="thItemsLista">Acciones</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                //Retraso para que se muestren 1 a 1 tiempos diferentes
+                int delay = 50;
+                int delayIncrement = 50;
+            }
+            @foreach (var item in Model)
+            {
+                <tr data-aos="fade-right" data-aos-delay="@delay" data-aos-duration="500">
+                    <td class="tdItems">@item.Nombre</td>
+
+
+                    <td class="tdEditDeleteLista">
+                        <a asp-controller="Posiciones" asp-action="Editar" asp-route-id="@item.Id" class="aEditDelete mb-3">
+                            <i class="bi bi-pen EditIconLista"></i>
+                        </a>
+                        <a asp-controller="Posiciones" asp-action="Borrar" asp-route-id="@item.Id" class="aEditDelete mb-3" onmousedown="confirmarEliminar('@item.Id','@item.Nombre')">
+                            <i class="bi bi-trash DeleteIconLista"></i>
+                        </a>
+                    </td>
+                </tr>
+                delay += delayIncrement; //Incrementando Delay para la animacion de AOS
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+        <script>
+            function confirmarEliminar(id, nombre) {
+                const mensajeConfirmacion = `¿Estás seguro de eliminar la posicion <strong>${nombre}</strong>? Esta acción no se puede deshacer.`;
+                Swal.fire({
+                    title: 'Confirmar Eliminación',
+                    html: mensajeConfirmacion, // Cambiado de 'text' a 'html'
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#4ecf6a',
+                    cancelButtonColor: '#d60032',
+                    confirmButtonText: 'Sí, eliminar',
+                    cancelButtonText: 'Cancelar',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = `/Posiciones/Borrar?id=${id}`;
+                    }
+                });
+            }
+
+    </script>
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+}
+
+

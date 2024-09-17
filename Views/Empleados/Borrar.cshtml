@@ -1,0 +1,24 @@
+﻿@model Empleado
+
+@{
+    ViewData["Title"] = "Borrar empleado";
+}
+
+<div class="card cardBorrarConfirmar">
+    <div class="card-header bg-danger text-white">
+        <h3 class="mb-0">Confirmar Borrado</h3>
+    </div>
+    <div class="card-body">
+        <p class="lead">¿Estás seguro de que deseas borrar al empleado <strong>@Model.Nombre</strong>?</p>
+        <p>Esta acción no se puede deshacer.</p>
+
+        <form asp-action="BorrarEmpleado">
+            <input type="hidden" asp-for="Id" />
+            <div class="d-flex justify-content-between mt-4">
+                <button type="submit" class="btn btn-danger BtnBorrarConfirmar">Borrar</button>
+                <a class="btn btn-secondary" asp-action="Lista">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+

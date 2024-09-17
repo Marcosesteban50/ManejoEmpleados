@@ -1,0 +1,54 @@
+﻿@using ManejoEmpleados.Models
+
+@model Departamentos
+
+
+@{
+    ViewData["Title"] = "Nuevo departamento";
+
+}
+
+<partial name="DashBoardSideBar" model="DashboardMenu.Departamentos"></partial>
+
+
+
+
+<div>
+
+
+
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <form class="formGeneral" asp-controller="Departamentos" asp-action="Nuevo">
+        <h2><span class="Span-N">N</span>uevo departamento</h2>
+        <div class="mb-3">
+
+            <label for="Nombre">Nombre</label>
+            <input class="inputs" asp-for="Nombre" type="text" />
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+       
+        <div class="mb-3">
+            <button class="btnGuardar" type="submit">Guardar</button>
+            <a asp-controller="Departamentos" asp-action="Lista" class="btnVolver">Volver</a>
+        </div>
+    </form>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+

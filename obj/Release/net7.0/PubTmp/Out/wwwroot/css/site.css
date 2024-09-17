@@ -1,0 +1,1922 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Poppins",sans-serif;
+    text-decoration: none;
+}
+
+html {
+    font-size: 14px;
+}
+
+
+
+/*PANTALLA CELL*/
+@media (max-width: 668px) {
+    html {
+        font-size: 16px;
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        background: #ebe9e9;
+        margin-bottom:60px;
+    }
+
+    .iconCreadosCard {
+        position: relative;
+        font-size: 30px;
+        width: 50px;
+        bottom:30px;
+        left: 80%;
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
+        background: #1A5B00;
+        transition: 0.3s;
+    }
+
+
+
+    .iconEliminadosCard {
+        position: relative;
+        font-size: 30px;
+        width: 50px;
+        bottom: 30px;
+        left: 80%;
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
+        background: #5B0000;
+        transition: 0.3s;
+    }
+
+
+
+
+
+  
+
+
+    .dashboard-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position:relative;
+        top:50px;
+
+    }
+
+    .dashboard-title {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+        .dashboard-title span {
+            font-size: 60px;
+            color: cornflowerblue;
+        }
+
+    .user-info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .user-info .bold {
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+    .cards-container {
+       
+       position:relative;
+       height:450px;
+         
+
+        
+        
+    }
+
+    .cardCreados {
+        background: #CDFFBA;
+    }
+
+    .cardEliminados {
+        background: #FFBABA;
+    }
+
+    .card {
+        border-radius: 8px;
+        box-shadow: 1px 1px 1px 1px black;
+        padding: 15px 30px;
+        margin: 10px;
+        
+        text-align: center;
+        transition: 0.3s;
+    }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            position: relative;
+            left: -30px;
+            top:20px;
+        }
+
+        .card .count {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+
+        .card:hover {
+            
+            box-shadow: 3px 3px 3px 3px black;
+        }
+
+
+
+
+
+
+
+
+    .ContainerMenuHamburguer {
+        height: 40px;
+        width: 40px;
+        border-radius: 3px;
+        border: 2px solid #C5CAFF;
+        position: absolute;
+        left:50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        top:18px;
+    }
+
+
+        .ContainerMenuHamburguer.activeHamburguer {
+            background: transparent;
+            top:18px;
+        }
+
+
+            .ContainerMenuHamburguer.activeHamburguer .one {
+                top: 50%;
+                transform: translateY(-25%) rotate(45deg);
+            }
+
+
+            .ContainerMenuHamburguer.activeHamburguer .two {
+                opacity: 0;
+            }
+
+            .ContainerMenuHamburguer.activeHamburguer .three {
+                bottom: 47%;
+                transform: translateY(25%) rotate(-45deg);
+            }
+
+
+    .menu {
+        position: relative;
+        height: 100%;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .menu .line {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            border-radius: 3px;
+            background-color: white;
+            transition: all 0.4s linear;
+        }
+
+        .menu .one {
+            top: 6px;
+        }
+
+        .menu .two {
+            left: 0;
+            opacity: 1;
+        }
+
+        .menu .three {
+            bottom: 6px;
+        }
+
+
+
+
+
+    .BoxClientes {
+        position: relative;
+        top: 100px;
+       
+       left:-20px;
+        overflow:visible;
+    }
+
+
+
+
+
+    .sidebar.activeBar {
+        height: 100vh;
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .active {
+        background: #e0e0e0;
+    }
+
+
+
+
+
+
+    .pManejoClientes{
+        font-weight:bold;
+        font-size:27px;
+        position:fixed;
+        top:3.5%;
+
+    }
+
+
+    .sidebar {
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        color: #fff;
+        padding: 20px;
+        transition:0.5s;
+        background: #939BFF;
+        display: flex;
+        align-items: center;
+        z-index: 500;
+    }
+
+
+
+   
+
+    .UlSideBar {
+        align-items: center;
+        display: none;
+        flex-direction: column;
+        height: 0%;
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0;
+        list-style: none;
+        padding: 0;
+        border-radius: 5px;
+        
+        
+        
+        
+    }
+
+
+        .UlSideBar.activeUlSideBar {
+            
+            display: flex;
+            
+            height: 60%;
+          
+        }
+
+        .UlSideBar li {
+            padding:15px;
+            
+            transition: all 0.2s ease-in-out;
+            width:100%;
+            
+        }
+
+            .UlSideBar li:hover {
+                background: #e0e0e0;
+            }
+
+        .UlSideBar a {
+            color: #fff;
+            padding: 10px 10px;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+
+
+
+    .SpanLogout {
+        color: #fff;
+    }
+
+
+
+    .DashboardIcon {
+        position: relative;
+        left: -10px;
+        font-size: 30px;
+    }
+
+
+
+    .UlSideBar a span {
+        overflow: hidden;
+    }
+
+    .UlSideBar li{
+        font-size:30px;
+    }
+
+
+    /*Iconos en el Menu de Hamburguer*/
+    .UlSideBar a .iL {
+        font-size: 30px;
+        color: #fff;
+        position: relative;
+        left: -20px;
+    }
+
+
+
+
+
+
+
+    
+
+
+  
+
+
+
+
+
+  
+
+    .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+        box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    }
+
+   
+
+
+    .ErrorMessageLogin {
+        position: absolute;
+        top: 280px;
+        color: red;
+        font-size:20px;
+    }
+
+        .ErrorMessageLogin ul {
+            list-style: none;
+        }
+
+
+    .trianguloLogin {
+        position: absolute;
+    }
+
+
+
+
+    .iconoActivo {
+        color: #92FF7A;
+    }
+
+    .iconoInactivo {
+        color: #FF7A7A;
+    }
+
+
+    .spaniconoActivo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    .spaniconoInactivo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+
+    .ListUserIconDiv {
+      display:none;
+    }
+
+    .ListaUserIcon {
+        font-size: 40px;
+        position: absolute;
+        left: 15px;
+        color: #FFB2B2;
+    }
+
+    .ListaUserIcon2 {
+        font-size: 40px;
+        position: absolute;
+        right: 45px;
+        top: 30px;
+        color: #C0FFB2;
+    }
+
+    .ListaUserIcon3 {
+        font-size: 40px;
+        position: absolute;
+        right: 15px;
+        color: #B2D0FF;
+    }
+
+
+
+    .EditIconLista {
+        font-size: 30px;
+        color: #7AC9FF;
+        transition: 0.3s;
+    }
+
+        .EditIconLista:hover {
+            color: black;
+        }
+
+    .DeleteIconLista {
+        font-size: 30px;
+        color: #9B715C;
+        transition: 0.3s;
+    }
+
+        .DeleteIconLista:hover {
+            color: black;
+        }
+
+
+    .tdEditDeleteLista {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .tdItems {
+        text-align: center;
+    }
+
+    .thItemsLista {
+        text-align: center;
+    }
+
+
+
+
+
+
+    /*Boton De agregar Cliente a lista*/
+    .AgregarCliente {
+        font-size: 40px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: #FFC47A;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+
+
+        .AgregarCliente:hover {
+            color: #FFC47A;
+            background: transparent;
+            border: 2px dashed #FFC47A;
+        }
+
+
+
+
+    /*Boton De Descargar Excel Lista cliente*/
+    .DowloadExcel {
+        font-size: 40px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: #92FF7A;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+
+        .DowloadExcel:hover {
+            color: #92FF7A;
+            background: transparent;
+            border: 2px dashed #92FF7A;
+        }
+
+
+    .DowloadPDF {
+        font-size: 40px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: #FF7A7A;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+        .DowloadPDF:hover {
+            color: #FF7A7A;
+            background: transparent;
+            border: 2px dashed #FF7A7A;
+        }
+
+
+
+
+
+
+
+    a {
+        text-decoration: none;
+    }
+
+
+
+
+
+    .DivBtnNuevo {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+    .PasswordInputLoginCheckBox {
+        position: absolute;
+        top: 220px;
+        right: 50%;
+        border: none;
+        padding: 10px 10px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
+
+
+        .PasswordInputLoginCheckBox:checked {
+            background: black;
+            color: cornflowerblue;
+            border: none;
+            box-shadow: none;
+        }
+
+        .PasswordInputLoginCheckBox:focus {
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+
+    .RegistroViewModel {
+        border: 1px solid black;
+        align-items: center;
+    }
+
+
+
+
+    .inputs {
+        position: relative;
+        width: 300px;
+        background: transparent;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        color: black;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+    }
+
+        .inputs::placeholder {
+            color: lightslategray;
+        }
+
+
+
+
+    .boxNuevo {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        left: 8%;
+        top: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(18px);
+        border-radius: 5px;
+        border: 3px solid black;
+        background: #fff;
+    }
+
+
+
+    .btnGuardar {
+     
+        font-size: 30px;
+        color: black;
+        background: transparent;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 5px 14px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px 80px;
+        position:relative;
+        left:10%;
+    }
+
+
+    .btnGuardar:hover {
+        background: black;
+        color: white;
+    }
+
+    .btnVolver {
+        position:relative;
+        top:80px;
+        left:12.5%;
+        font-size: 30px;
+        color: black;
+        background: transparent;
+        cursor: pointer;
+        transition: 0.5s;
+        
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 20px 80px;
+        
+    }
+
+
+    .btnVolver:hover {
+        background: black;
+        color: white;
+    }
+
+
+
+    .box {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        left: 8%;
+        top: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(18px);
+        border-radius: 5px;
+        border: 3px solid black;
+        background: #fff;
+    }
+
+
+
+
+
+    .box h2{
+        font-size:35px;
+        
+    }
+
+    .btnLogin {
+        font-size: 30px;
+        color: black;
+        background: transparent;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 5px 14px;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 10px 60px;
+       
+    }
+
+        .btnLogin:hover {
+            background: black;
+            color: white;
+        }
+
+
+
+
+    .btnRegistro {
+        position: absolute;
+        top: 250px;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 8px 14px;
+        padding: 10px 60px;
+        border: 1px solid black;
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+        background: #fff;
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+        .btnRegistro:hover {
+            background: black;
+            color: white;
+        }
+
+
+
+    .formGeneral {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 40px;
+        border-radius: 30px;
+    }
+
+
+        .formGeneral h2 {
+            color: black;
+            font-weight: 700;
+            position: relative;
+            bottom: 20px;
+        }
+
+
+    .checkboxPassword {
+        position: absolute;
+        z-index: 20;
+        top: 45%;
+        left: 79%;
+        border: none;
+        padding: 15px 15px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
+
+
+
+        .checkboxPassword:checked {
+            background: black;
+            color: white;
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+        .checkboxPassword:focus {
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+
+
+
+    .checkboxActivo {
+        position: relative;
+        z-index: 20;
+        right: 20%;
+        border: none;
+        padding: 10px 10px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
+
+
+
+
+        .checkboxActivo:checked {
+            background: cornflowerblue;
+            color: white;
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+        .checkboxActivo:focus {
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+
+
+
+
+    .group1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 20px;
+    }
+
+
+
+
+
+
+
+    .MicrosoftYgoogleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 50px;
+        width: 100%;
+    }
+
+
+    .Microsoft {
+        font-size: 20px;
+        border: 2px solid black;
+        padding: 7px 14px;
+        border-radius: 5px;
+        color: white;
+        background: black;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+        .Microsoft:hover {
+            color: black;
+            background: transparent;
+            border: 2px dashed black;
+        }
+
+
+    .Google {
+        font-size: 20px;
+        border: 2px solid black;
+        padding: 7px 14px;
+        border-radius: 5px;
+        color: white;
+        background: black;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+        .Google:hover {
+            color: black;
+            background: white;
+            border: 2px dashed black;
+        }
+
+    .divLoginH2 {
+        position: absolute;
+        padding: 30px;
+        top: 43%;
+    }
+
+    /*esto es en el login*/
+    .ClienteFoto {
+
+        display:none;
+       /* width: 200px;
+        border-radius: 40px;
+        top: 20%;
+        left: 30%;
+        position: absolute;*/
+    }
+
+    .h2LoginBienvenido {
+        display: none;
+        /* font-size: 30px;
+        font-weight: bold;*/
+    }
+
+    .h2p {
+        display: none;
+        /* font-size: 20px;
+        white-space: pre;
+        text-align: center;*/
+    }
+
+
+    .Span-R {
+        color: transparent;
+        -webkit-text-stroke: 1px black;
+        font-size: 45px;
+    }
+
+
+    .Span-N {
+        color: cornflowerblue;
+        font-size: 35px;
+    }
+
+
+   
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*PANTALLA PC*/
+@media(min-width:669px) {
+    body {
+        transition: 0.8s;
+        background: #ebe9e9;
+    }
+
+
+
+    .iconCreadosCard {
+        position: relative;
+        font-size: 30px;
+        width: 50px;
+        top: -45px;
+        left: 80%;
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
+        background: #1A5B00;
+        transition: 0.3s;
+    }
+
+
+
+    .iconEliminadosCard {
+        position: relative;
+        font-size: 30px;
+        width: 50px;
+        top: -45px;
+        left: 80%;
+        color: white;
+        padding: 10px;
+        border-radius: 30px;
+        background: #5B0000;
+        transition: 0.3s;
+    }
+
+
+
+
+
+    .cardCreados {
+        background: #CDFFBA;
+    }
+
+    .cardEliminados {
+        background: #FFBABA;
+    }
+
+
+    .dashboard-container {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .dashboard-title {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+        .dashboard-title span {
+            font-size: 60px;
+            color: cornflowerblue;
+        }
+
+    .user-info {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+        .user-info .bold {
+            font-weight: bold;
+            color: #0056b3;
+        }
+
+    .cards-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        border-radius: 8px;
+        box-shadow: 1px 1px 1px 1px black;
+        padding: 15px 30px;
+        margin: 10px;
+        width: 30%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+        .card h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: bold;
+            position: relative;
+            left: -30px;
+        }
+
+        .card .count {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+
+        .card:hover {
+            transform: translateY(-12px);
+            box-shadow: 3px 3px 3px 3px black;
+        }
+
+
+
+
+
+
+    .DashboardIcon {
+        position: relative;
+        left: 5px;
+        font-size: 30px;
+    }
+
+
+
+    .ContainerMenuHamburguer {
+        height: 40px;
+        width: 40px;
+        border-radius: 3px;
+        border: 2px solid #C5CAFF;
+        position: absolute;
+        left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s linear;
+    }
+
+
+        .ContainerMenuHamburguer.activeHamburguer {
+            background: transparent;
+            left: 160px;
+        }
+
+
+            .ContainerMenuHamburguer.activeHamburguer .one {
+                top: 50%;
+                transform: translateY(-25%) rotate(45deg);
+            }
+
+
+            .ContainerMenuHamburguer.activeHamburguer .two {
+                opacity: 0;
+            }
+
+            .ContainerMenuHamburguer.activeHamburguer .three {
+                bottom: 47%;
+                transform: translateY(25%) rotate(-45deg);
+            }
+
+
+    .menu {
+        position: relative;
+        height: 100%;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .menu .line {
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            border-radius: 3px;
+            background-color: white;
+            transition: all 0.4s linear;
+        }
+
+        .menu .one {
+            top: 6px;
+        }
+
+        .menu .two {
+            left: 0;
+            opacity: 1;
+        }
+
+        .menu .three {
+            bottom: 6px;
+        }
+
+
+
+
+
+    .BoxClientes {
+        position: relative;
+        top: 100px;
+    }
+
+
+
+
+
+    .sidebar.activeBar {
+        width: 240px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .active {
+        background: #e0e0e0;
+    }
+
+
+    .sidebar {
+        padding: 0;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100px;
+        height: 100vh;
+        color: #fff;
+        overflow: hidden;
+        padding: 20px;
+        transition: all 0.3s linear;
+        background: #939BFF;
+    }
+
+
+
+    .UlSideBar {
+        height: 88%;
+        position: relative;
+        top: 100px;
+        left: 0;
+        list-style: none;
+        padding: 0;
+        border-radius: 5px;
+    }
+
+
+        .UlSideBar li {
+            margin: 30px 0;
+            border-radius: 8px;
+            transition: all 0.5s ease-in-out;
+        }
+
+            .UlSideBar li:hover {
+                background: #e0e0e0;
+            }
+
+        .UlSideBar a {
+            color: #fff;
+            padding: 10px 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+
+
+
+    .SpanLogout {
+        color: #fff;
+    }
+
+
+
+
+    .UlSideBar a span {
+        overflow: hidden;
+    }
+
+    .UlSideBar a .iL {
+        font-size: 20px;
+        color: #fff;
+        position: relative;
+        left: 8px;
+    }
+
+
+    .UlSideBar a .UserI {
+        left: 6px;
+    }
+
+
+
+
+
+    .liName {
+        border: 5px double #C5CAFF;
+    }
+
+    .logout {
+        position: absolute;
+        border: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        outline: none;
+        bottom: 40px;
+        left: 0;
+        width: 100%;
+        font-size: 20px;
+    }
+
+
+
+
+
+
+    .h2ListaClientes {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+        box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+    }
+
+    html {
+        position: relative;
+        min-height: 100%;
+    }
+
+    body {
+        margin-bottom: 60px;
+    }
+
+
+
+    .ErrorMessageLogin {
+        position: absolute;
+        top: 280px;
+        color: red;
+    }
+
+        .ErrorMessageLogin ul {
+            list-style: none;
+        }
+
+
+    .trianguloLogin {
+        position: absolute;
+    }
+
+
+
+
+    .iconoActivo {
+        color: #92FF7A;
+    }
+
+    .iconoInactivo {
+        color: #FF7A7A;
+    }
+
+
+    .spaniconoActivo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    .spaniconoInactivo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+
+    .ListUserIconDiv {
+        position: absolute;
+        background: #EDEFFF;
+        border-radius: 30px;
+        top: -80px;
+        left: 50%;
+        width: 135px;
+        height: 100px;
+    }
+
+    .ListaUserIcon {
+        font-size: 40px;
+        position: absolute;
+        left: 15px;
+        color: #FFB2B2;
+    }
+
+    .ListaUserIcon2 {
+        font-size: 40px;
+        position: absolute;
+        right: 45px;
+        top: 30px;
+        color: #C0FFB2;
+    }
+
+    .ListaUserIcon3 {
+        font-size: 40px;
+        position: absolute;
+        right: 15px;
+        color: #B2D0FF;
+    }
+
+
+
+    .EditIconLista {
+        font-size: 30px;
+        color: #7AC9FF;
+        transition: 0.3s;
+    }
+
+        .EditIconLista:hover {
+            color: black;
+        }
+
+    .DeleteIconLista {
+        font-size: 30px;
+        color: #9B715C;
+        transition: 0.3s;
+    }
+
+        .DeleteIconLista:hover {
+            color: black;
+        }
+
+
+    .tdEditDeleteLista {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .tdItems {
+        text-align: center;
+    }
+
+    .thItemsLista {
+        text-align: center;
+    }
+
+
+
+
+
+
+    /*Boton De agregar Cliente a lista*/
+    .AgregarCliente {
+        font-size: 20px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: #FFC47A;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+
+
+        .AgregarCliente:hover {
+            color: #FFC47A;
+            background: transparent;
+            border: 2px dashed #FFC47A;
+        }
+
+
+
+
+    /*Boton De Descargar Excel Lista cliente*/
+    .DowloadExcel {
+        font-size: 20px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: #92FF7A;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+
+        .DowloadExcel:hover {
+            color: #92FF7A;
+            background: transparent;
+            border: 2px dashed #92FF7A;
+        }
+
+
+    .DowloadPDF {
+        font-size: 20px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: #FF7A7A;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+        .DowloadPDF:hover {
+            color: #FF7A7A;
+            background: transparent;
+            border: 2px dashed #FF7A7A;
+        }
+
+
+
+
+
+
+
+    a {
+        text-decoration: none;
+    }
+
+
+
+
+
+    .DivBtnNuevo {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+
+
+    .PasswordInputLoginCheckBox {
+        position: absolute;
+        top: 220px;
+        right: 50%;
+        border: none;
+        padding: 10px 10px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
+
+
+        .PasswordInputLoginCheckBox:checked {
+            background: black;
+            color: cornflowerblue;
+            border: none;
+            box-shadow: none;
+        }
+
+        .PasswordInputLoginCheckBox:focus {
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+
+    .RegistroViewModel {
+        border: 1px solid black;
+        align-items: center;
+    }
+
+
+
+
+
+
+
+
+    /**/
+
+    .LoginDivMain {
+        border: 3px solid black;
+    }
+
+    .inputs {
+        position: relative;
+        width: 300px;
+        background: transparent;
+        padding: 10px 15px;
+        border: none;
+        border-bottom: 2px solid black;
+        outline: none;
+        color: black;
+        font-size: 1em;
+        letter-spacing: 0.05em;
+    }
+
+        .inputs::placeholder {
+            color: lightslategray;
+        }
+
+
+
+
+
+    .box {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        left: 71.7%;
+        top: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px black;
+        background: #fff;
+    }
+
+    .boxNuevo {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        left: 34.7%;
+        top: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 2px 2px 2px black;
+        background: #fff;
+    }
+
+
+
+    .btnGuardar {
+        font-weight: 700;
+        font-size: 20px;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 8px 14px;
+        border:none;
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+    }
+
+
+        .btnGuardar:hover {
+            background: black;
+            color: white;
+        }
+
+    .btnVolver {
+        font-weight: 700;
+        font-size: 20px;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 12px 18px;
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+        border: none;
+    }
+
+
+        .btnVolver:hover {
+            background: black;
+            color: white;
+        }
+
+
+
+    .btnLogin {
+        font-weight: 700;
+        font-size:20px;
+        background: transparent;
+        color: black;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 5px;
+        backdrop-filter: blur(5px);
+    }
+
+        .btnLogin:hover {
+            background: black;
+            color: white;
+        }
+
+
+
+
+    .btnRegistro {
+        font-weight: 700;
+        font-size: 20px;
+        color: black;
+        background: transparent;
+        cursor: pointer;
+        transition: 0.5s;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 5px;
+    }
+
+        .btnRegistro:hover {
+            background: black;
+            color: white;
+        }
+
+
+
+    .formGeneral {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 40px;
+        border-radius: 30px;
+    }
+
+
+        .formGeneral h2 {
+            color: black;
+            font-weight: 700;
+            position: relative;
+            bottom: 50px;
+        }
+
+
+    .checkboxPassword {
+        position: absolute;
+        z-index: 20;
+        top: 47%;
+        left: 83%;
+        border: none;
+        padding: 10px 10px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
+
+
+
+        .checkboxPassword:checked {
+            background: black;
+            color: white;
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+        .checkboxPassword:focus {
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+
+
+
+    .checkboxActivo {
+        position: relative;
+        z-index: 20;
+        right: 20%;
+        border: none;
+        padding: 10px 10px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
+
+
+
+
+        .checkboxActivo:checked {
+            background: cornflowerblue;
+            color: white;
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+        .checkboxActivo:focus {
+            border: 1px solid black;
+            box-shadow: none;
+        }
+
+
+
+
+
+    .group1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 20px;
+    }
+
+
+
+
+
+
+
+    .MicrosoftYgoogleContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 50px;
+        width: 100%;
+    }
+
+
+    .Microsoft {
+        font-size: 20px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: black;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+        .Microsoft:hover {
+            color: black;
+            background: transparent;
+            border: 2px dashed black;
+        }
+
+
+    .Google {
+        font-size: 20px;
+        border: 2px solid black;
+        padding: 5px 9px;
+        border-radius: 5px;
+        color: white;
+        background: black;
+        transition: 0.3s;
+        margin-left: 20px;
+    }
+
+        .Google:hover {
+            color: black;
+            background: transparent;
+            border: 2px dashed black;
+        }
+
+
+
+
+    .divLoginH2 {
+        position: absolute;
+        padding: 30px;
+        top: 43%;
+    }
+
+    .ClienteFoto {
+        width: 200px;
+        border-radius: 40px;
+        top: 20%;
+        left: 30%;
+        position: absolute;
+    }
+
+    .h2LoginBienvenido {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .h2p {
+        font-size: 20px;
+        white-space: pre;
+        text-align: center;
+    }
+
+
+    .Span-R {
+        color: transparent;
+        -webkit-text-stroke: 1px black;
+        font-size: 35px;
+    }
+
+    .Span-N {
+        color: cornflowerblue;
+        font-size: 35px;
+    }
+
+
+    .ClienteFotoLogo{
+        display:none;
+    }
+
+
+    
+}
+
+

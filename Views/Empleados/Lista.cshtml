@@ -1,0 +1,97 @@
+﻿@using ManejoEmpleados.Models
+@model List<EmpleadosCreacionViewModel>
+
+@{
+    ViewData["Title"] = "Lista de empleados";
+
+}
+<partial name="DashBoardSideBar" model="DashboardMenu.Empleados"></partial>
+
+<div class="BoxClientes" data-aos="zoom-out" data-aos-delay="100" data-aos-duration="1000">
+
+    <div class="ListUserIconDiv">
+        <i class="bi bi-people-fill ListaUserIcon"></i>
+        <i class="bi bi-people-fill ListaUserIcon2"></i>
+        <i class="bi bi-people-fill ListaUserIcon3"></i>
+    </div>
+    @* <h2 class="h2ListaClientes">Lista clientes</h2>*@
+    <div class="DivBtnNuevo">
+        <a asp-controller="Empleados" asp-action="Nuevo" class="aNuevo" data-aos="zoom-out" data-aos-delay="500">
+            <i class="bi bi-person-plus-fill AgregarCliente"></i>
+        </a>
+        <a asp-controller="Empleados" asp-action="DownloadExcel" class="BtnExcel" data-aos="zoom-out" data-aos-delay="800">
+            <i class="bi bi-file-earmark-spreadsheet DowloadExcel"></i>
+        </a>
+        <a asp-controller="Empleados" asp-action="DescargarPDF" class="BtnExcel" data-aos="zoom-out" data-aos-delay="1100">
+            <i class="bi bi-filetype-pdf DowloadPDF"></i>
+        </a>
+    </div>
+
+    <table class="table table-borderless tableLightLista">
+        <thead>
+            <tr >
+                <th class="thItemsLista">Nombre</th>
+                <th class="thItemsLista">Email</th>
+                <th class="thItemsLista">Salario</th>
+                <th class="thItemsLista">Departamentos</th>
+                <th class="thItemsLista">Telefono</th>
+                <th class="thItemsLista">Posicion</th>
+                <th class="thItemsLista">Fecha Contrato</th>
+                <th class="thItemsLista">Activo</th>
+                <th class="thItemsLista">Opciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                //Retraso para que se muestren 1 a 1 tiempos diferentes
+                int delay = 50; 
+                int delayIncrement = 50; 
+            }
+            @foreach (var item in Model)
+            {
+                <tr data-aos="fade-right" data-aos-delay="@delay" data-aos-duration="500">
+                    <td class="tdItems">@item.Nombre</td>
+                    <td class="tdItems">@item.Email</td>
+                    <td class="tdItems">@item.Salario</td>
+                    <td class="tdItems">@item.DepartamentoNombre</td>
+                    <td class="tdItems">@item.Telefono</td>
+                    <td class="tdItems">@item.PosicionNombre</td>
+                    <td class="tdItems">@item.FechaContrato.ToString("dd/MM/yyyy")</td>
+                    <td>
+                        @if (item.Activo)
+                        {
+                            <span class="spaniconoActivo">
+                                <i class="bx bxs-user-check iconoActivo"></i>
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="spaniconoInactivo">
+                                <i class="bx bxs-user-x iconoInactivo"></i>
+                            </span>
+                        }
+                    </td>
+                    <td class="tdEditDeleteLista">
+                        <a asp-controller="Empleados" asp-action="Editar" asp-route-id="@item.Id" class="aEditDelete mb-3">
+                            <i class="bi bi-pen EditIconLista"></i>
+                        </a>
+                        <a asp-controller="Empleados" asp-action="Borrar" asp-route-id="@item.Id" class="aEditDelete mb-3">
+                            @* onmousedown="confirmarEliminar('@item.Id')" *@
+                            <i class="bi bi-trash DeleteIconLista"></i>
+                        </a>
+                    </td>
+                </tr>
+                delay += delayIncrement; //Incrementando Delay para la animacion de AOS
+            }
+        </tbody>
+    </table>
+</div>
+
+@section Scripts{
+  
+    <partial name="_ValidationScriptsPartial" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+}

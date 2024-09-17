@@ -1,0 +1,186 @@
+﻿@model Usuario
+
+@{
+    ViewData["Title"] = "Dashboard";
+    var email = Model.Email;
+    var FixedEmail = email.Split('@')[0];
+}
+
+<partial name="DashBoardSideBar" model="DashboardMenu.Dashboard"></partial>
+
+<div class="dashboard-container">
+    <h1 class="dashboard-title" data-aos="fade-down" data-aos-duration="900"><span>D</span>ashboard</h1>
+    <div class="user-info" data-aos="fade-down" data-aos-duration="900">
+        <p>Bienvenido, <span class="bold">@FixedEmail</span></p>
+    </div>
+    <div class="cards-container" data-aos="fade-down" data-aos-duration="900">
+        <div class="card cardCreados">
+
+            <h2><span class="spanC">C</span>lientes Creados</h2>
+ 
+            <i class="fas fa-user-plus IconEmpleadoCreado"></i>
+            <p class="count">@Model.EmpleadosContratados</p>
+        </div>
+        <div class="card cardEliminados">
+            <h2><span class="spanCE">C</span>lientes Eliminados</h2>
+            <i class="fas fa-user-minus IconEmpleadoEliminado"></i>
+            <p class="count">@Model.EmpleadosDespedidos</p>
+
+        </div>
+        
+        <div class="card cardSalarioempleado">
+            <h2><span class="spanS">S</span>alario</h2>
+            <i class="fa-solid fa-money-bill IconEmpleadoSalario"></i>
+            <p class="count">@Model.SalarioEmpleados</p>
+
+        </div>
+       
+       
+
+        
+    </div>
+</div>
+
+
+
+<div class="cavasDiv">
+    <canvas id="salarioChart"  class="canvasSalario"></canvas>
+    <canvas id="salarioChart1"  class="canvasSalario1"></canvas>
+</div>
+
+
+@section Scripts {
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script> <!-- Incluye el plugin -->
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        // Gráfico de Barras
+        var ctx = document.getElementById('salarioChart').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: [ 'Empleados Contratados', 'Empleados Despedidos','Salario Empleados'],
+                datasets: [
+                    {
+                        backgroundColor: ['#78db75', '#bd5353', '#6166a9'],
+                        data: [
+                            
+                            @Model.EmpleadosContratados,
+                            @Model.EmpleadosDespedidos,
+                            @Model.SalarioEmpleados
+                        ]
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        display: false
+                        
+                    },
+                    x: {
+                        display: false
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.raw.toLocaleString();  // Mostrar valores en formato legible
+                            }
+                        }
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'end',
+                        color: '#444',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: function (value) {
+                            return value.toLocaleString();  // Mostrar etiquetas con los valores
+                        }
+                    }
+                },
+                responsive: false,
+                maintainAspectRatio: true
+            }
+        });
+
+
+
+        var ct = document.getElementById('salarioChart1').getContext('2d');
+
+
+        var chart = new Chart(ct, {
+            type: 'bar',
+            data: {
+                labels: ['Empleados Contratados', 'Empleados Despedidos', 'Salario Empleados'],
+                datasets: [
+                    {
+                        label: 'Empleados Contratados',
+                        backgroundColor: '#78db75',
+                        data: [@Model.EmpleadosContratados, 0,0]  // Solo tiene valor para la primera etiqueta
+                    },
+                    {
+                        label: 'Empleados Despedidos',
+                        backgroundColor: '#bd5353',
+                        data: [0, @Model.EmpleadosDespedidos]  // Solo tiene valor para la segunda etiqueta
+                    },
+                    {
+                        label: 'Salario Empleados',
+                        backgroundColor: '#6166a9',
+                        data: [0, 0, @Model.SalarioEmpleados]  // Solo tiene valor para la tercera etiqueta
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        display: true
+
+                    },
+                    x: {
+                        display: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return context.raw.toLocaleString();  // Mostrar valores en formato legible
+                            }
+                        }
+                    },
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'end',
+                        color: '#444',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: function (value) {
+                            return value.toLocaleString();  // Mostrar etiquetas con los valores
+                        }
+                    }
+                },
+                responsive: false,
+                maintainAspectRatio: false
+            }
+        });
+
+
+
+    </script>
+}

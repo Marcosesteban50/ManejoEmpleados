@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "Página No Encontrada";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            display: inline-block;
+            text-align: left;
+            max-width: 600px;
+            width: 100%;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #870000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+            a:hover {
+                color: #870000;
+                background: transparent;
+                border: 2px dashed #870000;
+            }
+
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #dc3545;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">🚫</div>
+        <h1>Error de salario</h1>
+        <p>Lo sentimos, pero el salario de un empleado no puede ser mayor que el del jefe.</p>
+        <a asp-controller="Empleados" asp-action="Lista">Volver a la Lista de Empleados</a>
+    </div>
+</body>
+</html>
+

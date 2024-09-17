@@ -1,0 +1,149 @@
+﻿@model DashboardMenu
+@using Microsoft.AspNetCore.Identity;
+@inject SignInManager<Usuario> SignInManager
+@inject UserManager<Usuario> UserManager
+@{
+    var Name = User.Identity.Name;
+
+
+
+        Name = Name.Split('@')[0];
+
+
+
+
+}
+
+
+
+
+<div class="sidebar ">
+
+
+
+    @*Toggle es parala funcion JS de desplegar el Sidebar*@
+    <div class="ContainerMenuHamburguer toggle-btn">
+
+        <div class="menu ">
+            <span class="line one"></span>
+            <span class="line two"></span>
+            <span class="line three"></span>
+        </div>
+    </div>
+
+
+    
+    
+    <ul class="UlSideBar ">
+
+        
+
+
+        @if (SignInManager.IsSignedIn(User))
+        {
+
+
+
+            <li class="liName">
+              
+                <a>
+                    <i class="fa-solid fa-user UserI iL"></i>
+                    <span class="SpanLetrasDashboardsidebar">@Name</span>
+                </a>
+            </li>
+
+
+
+            <li class="@(Model == DashboardMenu.Dashboard ? "active" : null) ListaDash">
+                <a  asp-controller="Dashboard" asp-action="DashboardGeneral">
+                    <i class="bx bxs-dashboard DashboardIcon"></i>
+                    <span class="SpanLetrasDashboardsidebar">Dashboard</span>
+                </a>
+            </li>
+            <li class="@(Model == DashboardMenu.Empleados ? "active" : null)">
+
+                <a asp-controller="Empleados" asp-action="Lista">
+
+
+                    <i class="fa-solid fa-users-gear iL"></i>
+                    <span class="SpanLetrasDashboardsidebar">Clientes</span>
+                </a>
+            </li>
+            
+            
+            <li class="@(Model == DashboardMenu.Departamentos ? "active" : null)">
+
+                <a asp-controller="Departamentos" asp-action="Lista">
+
+                    <i class="fa-solid fa-users-rectangle rectangleIcon"></i>
+                    <span class="SpanLetrasDashboardsidebar">Departamentos</span>
+                </a>
+            </li>
+            
+            
+            <li class="@(Model == DashboardMenu.Posiciones ? "active" : null)">
+
+                <a asp-controller="Posiciones" asp-action="Lista">
+
+                    <i class="fa-solid fa-people-line PeopleLineIcon"></i>
+                    <span class="SpanLetrasDashboardsidebar">Posiciones</span>
+                </a>
+            </li> 
+            
+          
+
+
+
+
+
+
+
+            
+            <li class="logout">
+
+
+                <a href="#" id="logoutLink">
+                    <i class="fa-solid fa-right-from-bracket iL"></i>
+                    <span class="SpanLogout">Logout</span>
+                </a>
+
+            </li>
+
+
+
+
+
+                //Para Deslogearnos funciona esto
+            <form id="logoutForm" action="/Usuarios/Logout" method="post" style="display:none;">
+                @Html.AntiForgeryToken()
+            </form>
+
+
+        }
+        else
+        {
+            <li>
+                <a class="" asp-controller="Usuarios" asp-action="Registro">
+                    Registro
+                </a>
+            </li>
+
+            <li>
+                <a class="" asp-controller="Usuarios" asp-action="Login">
+                    Login
+                </a>
+            </li>
+        }
+
+
+
+
+
+
+
+    </ul>
+</div>
+
+
+
+
