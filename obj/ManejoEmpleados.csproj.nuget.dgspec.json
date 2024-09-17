@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\junio\\OneDrive\\Escritorio\\c# CURSO FULL\\ManejoEmpleados\\ManejoEmpleados.csproj": {}
+    "C:\\Users\\junio\\source\\repos\\ManejoEmpleados\\ManejoEmpleados.csproj": {}
   },
   "projects": {
-    "C:\\Users\\junio\\OneDrive\\Escritorio\\c# CURSO FULL\\ManejoEmpleados\\ManejoEmpleados.csproj": {
+    "C:\\Users\\junio\\source\\repos\\ManejoEmpleados\\ManejoEmpleados.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\junio\\OneDrive\\Escritorio\\c# CURSO FULL\\ManejoEmpleados\\ManejoEmpleados.csproj",
+        "projectUniqueName": "C:\\Users\\junio\\source\\repos\\ManejoEmpleados\\ManejoEmpleados.csproj",
         "projectName": "ManejoEmpleados",
-        "projectPath": "C:\\Users\\junio\\OneDrive\\Escritorio\\c# CURSO FULL\\ManejoEmpleados\\ManejoEmpleados.csproj",
+        "projectPath": "C:\\Users\\junio\\source\\repos\\ManejoEmpleados\\ManejoEmpleados.csproj",
         "packagesPath": "C:\\Users\\junio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\junio\\OneDrive\\Escritorio\\c# CURSO FULL\\ManejoEmpleados\\obj\\",
+        "outputPath": "C:\\Users\\junio\\source\\repos\\ManejoEmpleados\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\junio\\AppData\\Roaming\\NuGet\\NuGet.Config",
