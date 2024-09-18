@@ -26,10 +26,11 @@
 <div class="box">
 
 
+        <h2 class="h2Login"><span class="Span-L">L</span>ogin</h2>
 
     <input class="form-check-input checkboxPassword"
            type="checkbox" onclick="mostrarPassword()">
-    <form class="formGeneral" asp-action="Login">
+    <form class="formGeneralLoginyRegistro" asp-action="Login">
 
         <div asp-validation-summary="ModelOnly" class="ErrorMessageLogin">
             <i class="bi bi-exclamation-triangle-fill trianguloLogin"></i>
@@ -38,14 +39,13 @@
 
 
 
-        <h2><span class="Span-R">L</span>ogin</h2>
 
 
 
 
         <div class="mb-3">
 
-            <input asp-for="Email" placeholder="Email" class="inputs" />
+            <input  asp-for="Email" placeholder="Email" class="inputs" />
             <span asp-validation-for="Email" class=""></span>
         </div>
         <div class="mb-3">

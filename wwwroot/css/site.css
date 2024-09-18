@@ -769,7 +769,7 @@ html {
 
     .btnRegistro {
         position: absolute;
-        top: 250px;
+        top: 350px;
         background: transparent;
         color: black;
         cursor: pointer;
@@ -791,30 +791,54 @@ html {
 
 
 
-    .formGeneral {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 40px;
-        border-radius: 30px;
+
+
+     
+
+   
+    /**/
+
+    .h2Login {
+        background: transparent;
+        position: absolute;
+        top: 40px;
+    }
+    .h2Registro {
+        background: transparent;
+        position: absolute;
+        top: 40px;
     }
 
+    .checkboxPasswordRegistro {
+        position: absolute;
+        z-index: 20;
+        top: 40%;
+        left: 77%;
+        border: none;
+        padding: 10px 10px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
 
-        .formGeneral h2 {
-            color: black;
-            font-weight: 700;
-            position: relative;
-            bottom: 20px;
+        .checkboxPasswordRegistro:checked {
+            background: #6166a9;
+            color: white;
+            border: 1px solid black;
+            box-shadow: none;
         }
 
+        .checkboxPasswordRegistro:focus {
+            border: 1px solid black;
+            box-shadow: none;
+        }
 
     .checkboxPassword {
         position: absolute;
         z-index: 20;
-        top: 45%;
-        left: 79%;
+        top: 39%;
+        left: 70%;
         border: none;
         padding: 15px 15px;
         transition: 0.2s;
@@ -870,6 +894,31 @@ html {
 
 
 
+    /*Inputs formularios*/
+
+    .inputs {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 2px solid black;
+        background: transparent;
+        font-size: 16px;
+        color: #333;
+        transition: 0.6s;
+    }
+
+        .inputs:focus {
+            border-color: #6166a9;
+            outline: none;
+        }
+
+
+
+    /*Login y registro de cell*/
+    .formGeneralLoginyRegistro {
+        padding: 15px;
+        margin: 10px;
+    }
+
 
     .group1 {
         display: flex;
@@ -890,7 +939,7 @@ html {
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 50px;
+        top: 80px;
         width: 100%;
     }
 
@@ -962,14 +1011,12 @@ html {
 
 
     .Span-R {
-        color: transparent;
-        -webkit-text-stroke: 1px black;
-        font-size: 45px;
+        color: #6166a9;
+        font-size: 35px;
     }
 
-
-    .Span-N {
-        color: cornflowerblue;
+    .Span-L {
+        color: black;
         font-size: 35px;
     }
 
@@ -1174,6 +1221,14 @@ html {
     }
 
 
+
+
+
+
+
+
+
+   
 
 
 
@@ -1847,31 +1902,70 @@ html {
         }
 
 
+    /*Inputs formularios*/
+
+    .inputs {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 2px solid black;
+        background: transparent;
+        font-size: 16px;
+        color: #333;
+        transition:  0.6s;
+    }
+
+        .inputs:focus {
+            border-color: #6166a9;
+             outline: none;
+        }
+
+
+
+    select {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 2px solid black;
+        background: transparent;
+        font-size: 16px;
+        color: #333;
+    }
+
+        select:focus {
+            border-color: blue;
+            outline: none;
+        }
 
     .formGeneral {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 20px;
-        padding: 0 40px;
-        border-radius: 30px;
+        padding: 40px;
+        gap:10px;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        width: 600px;
+        margin: auto;
+        position: relative;
+        top: 80px;
     }
 
-
-        .formGeneral h2 {
-            color: black;
-            font-weight: 700;
-            position: relative;
-            bottom: 50px;
-        }
+    .h2NuevoEmpleado{
+        font-size:30px;
+        
+        position:absolute;
+        
+        left:45%;
+        top:30px;
+    }
 
 
     .checkboxPassword {
         position: absolute;
         z-index: 20;
-        top: 47%;
-        left: 83%;
+        top: 43%;
+        left: 70%;
         border: none;
         padding: 10px 10px;
         transition: 0.2s;
@@ -1892,7 +1986,36 @@ html {
         .checkboxPassword:focus {
             border: 1px solid black;
             box-shadow: none;
-        }
+        } 
+        
+        
+        
+        .checkboxPasswordRegistro {
+        position: absolute;
+        z-index: 20;
+        top: 43%;
+        left: 77%;
+        border: none;
+        padding: 10px 10px;
+        transition: 0.2s;
+        background: white;
+        border: 1px solid black;
+        box-shadow: none;
+    }
+
+
+
+            .checkboxPasswordRegistro:checked {
+                background: #6166a9;
+                color: white;
+                border: 1px solid black;
+                box-shadow: none;
+            }
+
+            .checkboxPasswordRegistro:focus {
+                border: 1px solid black;
+                box-shadow: none;
+            }
 
 
 
@@ -2015,14 +2138,28 @@ html {
     }
 
 
+    .h2Registro {
+        position: absolute;
+        top: 70px;
+    }
+
     .Span-R {
-        color: transparent;
-        -webkit-text-stroke: 1px black;
+        color: #6166a9;
         font-size: 35px;
     }
 
+    .Span-L {
+        color: black;
+        font-size: 35px;
+    }
+
+    .h2Login {
+        position: absolute;
+        top:70px;
+    }
+
     .Span-N {
-        color: cornflowerblue;
+        color: #6166a9;
         font-size: 35px;
     }
 

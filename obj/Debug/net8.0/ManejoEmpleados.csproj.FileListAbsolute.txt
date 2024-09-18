@@ -322,3 +322,4 @@ C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\ManejoEmpleados\obj\Debug\net8.
 C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\ManejoEmpleados\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\ManejoEmpleados\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.Views.dll
 C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\ManejoEmpleados\bin\Debug\net8.0\AspNetCoreHero.ToastNotification.dll
+C:\Users\junio\OneDrive\Escritorio\c# CURSO FULL\ManejoEmpleados\obj\Debug\net8.0\ManejoEmpleados.sourcelink.json

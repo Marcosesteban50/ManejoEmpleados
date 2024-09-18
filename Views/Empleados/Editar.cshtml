@@ -26,21 +26,21 @@
         <div class="mb-3">
 
             <label for="Nombre">Nombre Completo</label>
-            <input class="" asp-for="Nombre" type="text" />
+            <input class="inputs" asp-for="Nombre" type="text" />
             <span asp-validation-for="Nombre" class="text-danger"></span>
         </div>
 
 
         <div class="mb-3">
             <label>Correo</label>
-            <input class="" asp-for="Email" type="text" />
+            <input class="inputs" asp-for="Email" type="text" />
             <span asp-validation-for="Email" class="text-danger"></span>
 
 
         </div>
         <div class="mb-3">
             <label>Salario</label>
-            <input class="" asp-for="Salario" type="number" />
+            <input class="inputs" asp-for="Salario" type="number" />
             <span asp-validation-for="Salario" class="text-danger"></span>
 
 
@@ -48,14 +48,14 @@
 
         <div class="mb-3">
             <label>Departamentos</label>
-            <select class="" asp-for="DepartamentoId" asp-items="Model.Departamentos"></select>
+            <select class="inputs" asp-for="DepartamentoId" asp-items="Model.Departamentos"></select>
             <span asp-validation-for="DepartamentoId" class="text-danger"></span>
 
 
         </div>
         <div class="mb-3">
             <label>Telefono</label>
-            <input class="" asp-for="Telefono" type="text" />
+            <input class="inputs" asp-for="Telefono" type="text" />
             <span asp-validation-for="Telefono" class="text-danger"></span>
 
 
@@ -63,7 +63,7 @@
 
         <div class="mb-3">
             <label>Posiciones</label>
-            <select class="" asp-for="PosicionId" asp-items="Model.Posiciones"></select>
+            <select class="inputs" asp-for="PosicionId" asp-items="Model.Posiciones"></select>
             <span asp-validation-for="PosicionId" class="text-danger"></span>
 
 
@@ -71,7 +71,7 @@
 
         <div class="mb-3">
             <label>Fecha Contrato</label>
-            <input class="" asp-for="FechaContrato" type="date" />
+            <input class="inputs" asp-for="FechaContrato" type="date" />
             <span asp-validation-for="FechaContrato" class="text-danger"></span>
 
 
